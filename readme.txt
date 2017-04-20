@@ -1,3 +1,6 @@
+A simple theme based on the _tk starter theme. Most of the files here are specific to a particular website and need some cleaning up.
+
+
 *************************************************************
 
 This theme, like WordPress, is licensed under the GPL.
