@@ -1,0 +1,737 @@
+/*
+Theme Name: bootstrap-black
+Theme URI: http://themekraft.com/store/_tk-free-wordpress-starter-theme-based-on-twitter-bootstrap/
+Author: Winston
+Author URI: http://winstonmarvel.com/
+Description: A black bootstrap WordPress theme built from the _tk starter theme.
+Version: 1.0.0
+License: GNU General Public License v3.0 /
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: black, dark, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
+the _s starter theme from Automattic, the guys behind WordPress.
+
+_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitter Bootstrap
+
+Credits:
+
+1. Bootstrap
+
+ * Bootstrap v3.3.1 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=f58353a31151a8c05d7c)
+ * Config saved to config.json and https://gist.github.com/f58353a31151a8c05d7c
+
+2. wp_bootstrap_navwalker
+
+* Class Name: wp_bootstrap_navwalker
+* GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
+
+3. Glyphicons
+
+ * http://getbootstrap.com/components/
+
+*/
+
+/* My Minimal WordPress Styling comes here */
+
+/* This is a small security for too long strings titles */
+body {
+	word-wrap: break-word;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+}
+img[class*="wp-image-"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	max-width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.wp-caption.aligncenter {
+	margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+.wp-caption .wp-caption-text {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.gallery dd {
+	margin: 0;
+}
+.gallery-caption {
+	display: block;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.main-content-inner {
+	padding-bottom: 1.5em;
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.sticky {
+	display: block;
+}
+.bypostauthor {
+	display: block;
+}
+
+
+/* Clearing */
+.clear {
+	clear: both;
+}
+
+/* Navigation */
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:active>.dropdown-menu, .dropdown-submenu:hover>.dropdown-menu {
+display: block;
+}
+.dropdown-submenu>a:after{
+	display:block;
+	content:" ";
+	float:right;
+	width:0;height:0;border-color:transparent;
+	border-style:solid;
+	border-width:5px 0 5px 5px;
+	border-left-color:#cccccc;
+	margin-top:5px;
+	margin-right:-10px;
+}
+
+.dropdown-submenu:active>a:after{border-left-color:#ffffff;}
+
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{
+	left:-100%;
+	margin-left:10px;
+	-webkit-border-radius:6px 0 6px 6px;
+	-moz-border-radius:6px 0 6px 6px;
+	border-radius:6px 0 6px 6px;}
+
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: 2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.widget_search .search-form input[type="submit"] { display: none; }
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ .comment .children { margin-left: 1.5em; }
+
+/**
+* Some WP Theme Repository requirements
+*/
+
+.sticky {
+}
+
+.gallery-caption {
+
+}
+
+.bypostauthor {
+
+}
+
+.entry-meta {
+	clear: both;
+	padding-bottom: 1em;
+}
+
+/*
+ == Quick CSS styling tips ==
+
+ You can start off in a rough direction with some minimal styles.
+ See below for some tips. ;)
+
+
+ == Want to have the whole site wrapped? ==
+
+ Just fill the .container class with some background color to have a the whole site "wrapped".
+ This works so easy because every main part is wrapped only once into a container class by bootstrap.
+ Try out by decommenting the next line and go from there.
+
+ .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+
+ == Want to wrap just the content and sidebar in Bootstrap style? ==
+
+ That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
+
+
+ == Infinite Scrolling by Jetpack ==
+ You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html..
+
+/* Globally hidden elements when Infinite Scroll is supported and in use.
+ * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */
+
+/*
+.infinite-scroll .page-links,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+*/
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
+/*
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+*/
+
+/* Hey, if you don't need my comments anymore, just delete me! :) Here's where my designing starts! Winston */
+
+
+
+body{
+	background-color: black;
+	color:#3c4147;
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size:16px;
+
+}
+
+.main-content{
+	background-image:url(http://www.johngiftah.com/pattern.png);
+	
+
+}
+
+.sidemenu a {
+	color:#EEEEEE;
+}
+	
+
+.site-title{
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+	font-size: 24px;
+	font-variant: small-caps;
+	
+}
+
+a[title="John Giftah International"]
+{
+	color:#F8F9BC;
+
+}
+
+a:active, a:visited, a:hover{
+	text-decoration: none;
+	}
+
+.lead{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin-bottom: 0;
+	font-size:15px;
+	color:#FFF;
+	padding-left: 8em;
+	text-transform: uppercase;
+	position: relative;
+	margin-top: -7px;
+}
+
+/* This spreads navbar */
+	.navbar-nav {
+	    display:table;
+	    width:80%;
+	    margin: 0;
+	}
+
+	/* This spreads navbar */
+	.navbar-nav > li {
+	    float:none;
+	    display:table-cell;
+	    text-align:center;
+	}
+
+
+.navbar{
+	overflow: visible;
+	margin-bottom: 0;
+	border-radius: 0;
+	border-style: solid;
+	border-width: 1px;
+	min-height: 40px;
+}
+.navbar a{
+	font-size: 14px;
+}
+
+
+
+.navbar-brand, .navbar-brand a{
+	font-variant: small-caps;
+	font-weight: 900;
+	color: rgb(118, 13, 13);
+	font-size: 20px;
+}
+
+
+.dropdown-menu{
+	font-size:16px;
+}
+
+
+/*Side menu*/
+.sidemenu li{
+	list-style-type: none;
+	display:inline;
+
+}
+
+.sidemenu .menu-item a{
+	border-right: 1px solid white;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.sidemenu a:hover{
+	color:rgb(233, 213, 66);
+}
+
+.sidemenu{
+	padding-top: 0.5em;
+	float: right;
+	font-size:14px;
+}
+
+#menu-sidemenu{
+	padding-bottom: 0;
+	padding-left: 0;
+}
+
+.title-description{
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+
+
+.brand-image{
+	padding-left: 2em;
+	padding-top: 1em;
+	padding-right:1em;
+	height:6em;
+	width: auto;
+}
+
+.social-icon{
+	width: 3.5em;
+	padding-left:0.5em;
+	padding-right: 0.5em;
+	height:auto;
+	padding-bottom: 0.5em;
+}
+
+.social-buttons-container{
+float:right;
+}
+
+.social-buttons{
+	    
+		
+		padding-top: 1em;
+}
+.social-buttons-floater{
+	float:right;
+}
+
+#johns-face{
+	padding-top: 1em;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.page-title{
+	text-transform: capitalize;
+	text-align: center;
+	
+}
+
+
+
+h1,h2,h3{
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color:#3c4147;
+}
+
+.page-title, .page-title>a{
+		color:#760d0d;
+		font-weight: 600;
+}
+
+.nav > li > a:hover{
+	background-color: #337AB7;
+	color:#FFF;
+	font-style: bold;
+}
+
+
+
+#getsaved{
+	margin-bottom:0.5em;
+	font-size: 56px;
+	text-align: center;
+	color:#760d0d;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: 900;
+	
+}
+
+
+.headerslider{
+box-shadow: 0px 2px 2px rgb(179, 179, 179);
+margin-bottom: 2em;
+}
+
+
+.front-page-icons{
+	
+	height: 10em;
+	width: auto;
+	text-align: center;
+
+}
+
+.front-page-icon-text{
+	text-align:center;
+	font-size: 36px;
+	color: #337ab7;
+	margin-top: 0;
+	font-variant: small-caps;
+	padding-top: 5px;
+}
+
+p.fp-icon-description{
+	text-align:center;
+	color:#3c4147;
+}
+
+
+.read-more-text{
+	display: block;
+	width :20em;
+	border: 1px solid #337AB7;
+	margin:0 auto;
+		text-align: center;
+	padding-left: 10px;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	margin-top: 1em;
+}
+
+a.more-link:hover
+span.read-more-text:hover{
+	background-color: #337AB7;
+	color:white;	
+	font-weight: bold;
+
+}
+
+
+#envira_shortcode_slug_330{
+background-color:#ebebeb;
+}
+
+.search-bar{
+	position: relative;
+ 
+    float: left;
+}
+
+
+.search-field{
+	padding: 2% 3%;
+	color:#2b2b2b;
+	background-color: #f5f5f5;
+	border-radius:2px;
+	height: 2em;
+	font-weight: 100;
+}
+
+
+.site-footer li a {
+	color:#A8A8A8;
+	line-height:2em;
+	text-decoration:none;
+	font-weight:normal;
+	
+}
+
+.site-footer { display: block; padding-top: 2em; background-color: black;}
+.site-footer ul { padding-left: 0px;}
+.site-footer li { list-style-type: none; font-size: 12px; text-align: center;}
+.site-footer a{
+	text-transform: uppercase;
+	
+}
+
+.site-footer a:hover{
+color:rgb(233, 213, 66);
+}
+
+
+
+.credits{
+	font-size: 10px;
+float: left;
+color: rgb(168, 168, 168);
+}
+
+
+.entry-content-thumbnail > .wp-post-image{
+	    display: block;
+    margin: auto;
+    padding: 1em;
+    
+}
+
+.fa-chevron-right { font-size: 32px; }
+.fa-clock-o .fa-user{font-size:15px;}
+div.polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 0;
+    padding-right: 0;
+display:inline-block;
+}
+
+div.polaroid:hover{
+   
+    box-shadow:20px 20px 20px 0 rgba(0, 0, 0, 0.2), 0px 20px 20px 0 rgba(0, 0, 0, 0.19)
+   
+}
+
+.front-page-polaroid-text{
+	text-align:center;
+	font-size: 36px;
+	color:#3c4147;
+	margin-top: 0;
+	margin-bottom: 0;	
+	font-variant: small-caps;
+	color:#337ab7;
+}
+
+p.fp-polaroid-description{
+	text-align:center;
+	padding-left: 1em;
+}
+.fp-polaroid-description{
+	font-size: 14px;
+	color: #760D0D;
+}
+
+.fp-polaroid-description:hover, .fp-polaroid-description:active, .fp-polaroid-description:visited, .front-page-polaroid-text:active, .front-page-polaroid-text:hover, .front-page-polaroid-text:visited{
+text-decoration: none;
+
+}
+
+
+.youtube-front-wrapper{
+margin-top: 2em;
+margin-bottom: 2em;
+overflow: hidden;
+
+}
+
+.youtube-front-wrapper>div>h1{
+	color: #337ab7;
+	font-variant: small-caps;
+	font-weight: 900;
+}
+
+.youtube-front-wrapper>div>p{
+		font-weight: 500;
+}
+.testimony-wrapper{
+	background-image: url("http://www.johngiftah.com/background.jpg");
+}
+
+.testimony-wrapper > h1{
+	color: white;
+	font-family: "Lato";
+	font-size: 50px;
+	padding-left: 0.5em;
+	text-align: left;
+	font-style: italic;
+	font-weight: 600;
+
+}
+
+.testimony-read-more{
+	position: relative;
+	margin-bottom: 2em;
+	color: #337ab7;
+	border: medium solid white;
+	background-color: white;
+	font-family: "Lato";
+	font-variant: all-small-caps;
+	font-weight: 900;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.testimony-read-more:hover{
+	background-color: #337ab7;
+	border: medium solid #337ab7;
+	color: white;
+}
+.testimony-read-more:hover, .testimony-read-more:active, .testimony-read-more:visited{
+	text-decoration: none;
+}
+
+.dropshadow{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.dropshadow:hover{
+   
+    box-shadow:20px 20px 20px 0 rgba(0, 0, 0, 0.2), 0px 20px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+
+.threesteps-wrapper{
+	margin-top: 2em;
+}
+
+.copy-right{
+text-align: center;
+text-transform: capitalize;
+font-size: 12px;
+color: grey;
+}
+
+.fb-hider > .fb-social-plugin{
+	display: none;
+}
+
+
+.pager li > a:hover, .pager li > a:focus {
+background-color: #337AB7;
+color: white;
+}
+
+
+.pager li > a, .pager li > span {
+	    border-radius: 2px;
+    display: block;
+    width: 20em;
+    border: 1px solid #337AB7;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    margin-top: 1em;
+}
+
+
+.copy-right:active:focus {
+    text-decoration: none;
+    color: black;
+
+}
